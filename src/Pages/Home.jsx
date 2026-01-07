@@ -8,56 +8,58 @@ import Testimonials from "../Components/Testimonials/Testimonials";
 import Banner from "../Components/Banner/Banner";
 import Faqs from "../Components/Faqs/Faqs";
 import Footer from "../Components/Footer/Footer";
-import FadeInSection from "../Components/FadeInSection/FadeInSection"; // responsive fade
+import FadeInSection from "../Components/FadeInSection/FadeInSection";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Navbar />
 
       {/* Hero Section */}
       <FadeInSection delay={0.2}>
-        <Hero />
+        <div className="px-3 px-md-5 mt-5">
+          <Hero />
+        </div>
       </FadeInSection>
 
       {/* Steps Section */}
       <FadeInSection delay={0.4}>
-        <div style={{ padding: "0 1.5rem", marginTop: "80px" }}>
+        <div className="px-3 px-md-5 mt-5">
           <Steps />
         </div>
       </FadeInSection>
 
       {/* Cards Section */}
       <FadeInSection delay={0.6}>
-        <div style={{ padding: "0 1.5rem", marginTop: "80px" }}>
+        <div className="px-3 px-md-5 mt-5">
           <Card />
         </div>
       </FadeInSection>
 
       {/* About Section */}
       <FadeInSection delay={0.8}>
-        <div style={{ padding: "0 1.5rem", marginTop: "80px" }}>
+        <div className="px-3 px-md-5 mt-5">
           <About />
         </div>
       </FadeInSection>
 
       {/* Testimonials Section */}
       <FadeInSection delay={1}>
-        <div style={{ padding: "0 1.5rem", marginTop: "80px" }}>
+        <div className="px-3 px-md-5 mt-5">
           <Testimonials />
         </div>
       </FadeInSection>
 
       {/* Banner Section */}
       <FadeInSection delay={1.2}>
-        <div style={{ padding: "0 1.5rem", marginTop: "80px" }}>
+        <div className="px-3 px-md-5 mt-5">
           <Banner />
         </div>
       </FadeInSection>
 
       {/* FAQs Section */}
       <FadeInSection delay={1.4}>
-        <div style={{ padding: "0 1.5rem", marginTop: "80px" }}>
+        <div className="px-3 px-md-5 mt-5 mb-5">
           <Faqs />
         </div>
       </FadeInSection>
@@ -69,4 +71,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
