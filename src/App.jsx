@@ -66,7 +66,7 @@ function App() {
       <Scroll />
       <Routes>
         <Route path="/" element={<AnimatedHome />} />
-        <Route path="/about" element={<AnimatedAbout />} />
+        <Route path="/about" element={<FadeInSection delay={0.5}><AnimatedAbout /></FadeInSection>} />
         <Route path="/contact" element={<AnimatedContact />} />
         <Route path="/trending" element={<AnimatedTrending />} />
         <Route path="/chooseyourfabric" element={<AnimatedChooseYourFabric />} />

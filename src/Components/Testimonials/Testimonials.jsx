@@ -1,107 +1,77 @@
-import React from 'react'
+import React from "react";
 
 const Testimonials = () => {
+  const testimonialsData = [
+    {
+      name: "Maria Smantha",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.",
+      stars: 4.5,
+    },
+    {
+      name: "Lisa Cudrow",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.",
+      stars: 5,
+    },
+    {
+      name: "John Smith",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.",
+      stars: 4,
+    },
+  ];
+
   return (
-//    
-    <div>
-  <section>
-    {/* Heading Section */}
-    <div class="row">
-      <div class="col-md-10 col-xl-8">
-        <h3
-          class="mb-4 text-start"
-          style={{
-            fontWeight: "bold",
-            fontSize: "70px",
-            lineHeight: "1.2",
-            // Tum yahan margin ya padding kaafi easily adjust kar sakti ho
-            marginLeft: "50px", // optional
-            color: "#000", // optional
-          }}
-        >
-          Testimonials
-        </h3>
-      </div>
-    </div>
-
-    {/* Testimonials Cards Section */}
-    <div class="row text-center" style={{ marginTop: "80px" }}>
-      {/* Card 1 */}
-      <div class="col-md-4 mb-5 mb-md-0">
-        <div class="d-flex justify-content-center mb-4">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-            class="rounded-circle shadow-1-strong"
-            width="150"
-            height="150"
-          />
+    <section className="container py-5">
+      {/* Heading */}
+      <div className="row mb-5">
+        <div className="col-12 col-md-10 col-xl-8">
+          <h3
+            className="text-start fw-bold"
+            style={{ fontSize: "clamp(2rem, 6vw, 4rem)", lineHeight: 1.2 }}
+          >
+            Testimonials
+          </h3>
         </div>
-        <h5 class="mb-3" style={{ fontSize: "40px" }}>Maria Smantha</h5>
-        <p class="px-xl-3">
-          <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur <br />
-          adipisicing elit. Quod eos id officiis hic tenetur <br /> quae quaerat ad velit ab hic tenetur.
-        </p>
-        <ul class="list-unstyled d-flex justify-content-center mb-0">
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star-half-alt fa-sm text-warning"></i></li>
-        </ul>
       </div>
 
-      {/* Card 2 */}
-      <div class="col-md-4 mb-5 mb-md-0">
-        <div class="d-flex justify-content-center mb-4">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-            class="rounded-circle shadow-1-strong"
-            width="150"
-            height="150"
-          />
-        </div>
-        <h5 class="mb-3" style={{ fontSize: "40px" }}>Lisa Cudrow</h5>
-        <p class="px-xl-3">
-          <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur <br />
-          adipisicing elit. Quod eos id officiis hic tenetur <br /> quae quaerat ad velit ab hic tenetur.
-        </p>
-        <ul class="list-unstyled d-flex justify-content-center mb-0">
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-        </ul>
+      {/* Testimonials Cards */}
+      <div className="row text-center">
+        {testimonialsData.map((t, index) => (
+          <div key={index} className="col-12 col-md-6 col-lg-4 mb-5">
+            <div className="d-flex justify-content-center mb-4">
+              <img
+                src={t.img}
+                alt={t.name}
+                className="rounded-circle shadow"
+                style={{ width: "150px", height: "150px", objectFit: "cover" }}
+              />
+            </div>
+            <h5 style={{ fontSize: "clamp(1.25rem, 2vw, 2rem)" }} className="mb-3">
+              {t.name}
+            </h5>
+            <p className="px-2 px-md-4">
+              <i className="fas fa-quote-left pe-2"></i>
+              {t.text}
+            </p>
+            <ul className="list-unstyled d-flex justify-content-center mb-0">
+              {Array.from({ length: 5 }).map((_, i) => {
+                if (i < Math.floor(t.stars)) {
+                  return <li key={i}><i className="fas fa-star text-warning"></i></li>;
+                } else if (i < t.stars) {
+                  return <li key={i}><i className="fas fa-star-half-alt text-warning"></i></li>;
+                } else {
+                  return <li key={i}><i className="far fa-star text-warning"></i></li>;
+                }
+              })}
+            </ul>
+          </div>
+        ))}
       </div>
+    </section>
+  );
+};
 
-      {/* Card 3 */}
-      <div class="col-md-4 mb-0">
-        <div class="d-flex justify-content-center mb-4">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
-            class="rounded-circle shadow-1-strong"
-            width="150"
-            height="150"
-          />
-        </div>
-        <h5 class="mb-3" style={{ fontSize: "40px" }}>John Smith</h5>
-        <p class="px-xl-3">
-          <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur <br />
-          adipisicing elit. Quod eos id officiis hic tenetur <br /> quae quaerat ad velit ab hic tenetur.
-        </p>
-        <ul class="list-unstyled d-flex justify-content-center mb-0">
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="fas fa-star fa-sm text-warning"></i></li>
-          <li><i class="far fa-star fa-sm text-warning"></i></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</div>
+export default Testimonials;
 
-  )
-}
-
-export default Testimonials

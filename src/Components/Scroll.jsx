@@ -5,8 +5,9 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // ✅ hamesha upar se start karega
+    window.scrollTo({ top: 0, behavior: "smooth" }); // smooth scroll
   }, [pathname]);
 
   return null;
 }
+

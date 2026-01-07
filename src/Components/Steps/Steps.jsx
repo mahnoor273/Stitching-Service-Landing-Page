@@ -2,17 +2,12 @@ import React from "react";
 
 const Steps = () => {
   return (
-    <div
-      style={{
-        padding: "0 3rem", // 👈 same as px-5 (hero section)
-      }}
-    >
+    <div className="px-3 px-md-5">
       <h1
+        className="fw-bold mb-4"
         style={{
-          fontWeight: "bold",
-          fontSize: "70px",
+          fontSize: "clamp(2rem, 6vw, 4rem)",
           lineHeight: "1.2",
-          marginBottom: "30px",
         }}
       >
         How to Design Your Cloths
@@ -20,10 +15,10 @@ const Steps = () => {
 
       <ul
         style={{
-          fontSize: "50px",
+          fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
           lineHeight: "2",
           listStyle: "none",
-          paddingLeft: "0px",
+          paddingLeft: "0",
           margin: "0",
         }}
       >
@@ -37,4 +32,5 @@ const Steps = () => {
 };
 
 export default Steps;
+
 
