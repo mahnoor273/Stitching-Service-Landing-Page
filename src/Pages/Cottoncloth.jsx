@@ -1,5 +1,5 @@
 import React from 'react';
-import card1 from "../assets/cotton.png";
+import card1 from "../assets/Cotton.png";
 import card2 from "../assets/c1.png";
 import card3 from "../assets/c2.png";
 import card4 from "../assets/c3.png";
