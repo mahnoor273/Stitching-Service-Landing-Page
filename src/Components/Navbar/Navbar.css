@@ -1,0 +1,54 @@
+ /* Nav links default white */
+        .nav-link.custom-hover {
+          color: black !important;
+          text-decoration: none;
+        }
+
+        /* Hover effect */
+        .nav-link.custom-hover:hover {
+          color: #7303a0ff !important;
+          /* text-decoration: underline; */
+        }
+
+        /* Prevent orange on click */
+        .nav-link.custom-hover:active {
+          color: white !important;
+        }
+
+        /* Dropdown menu item hover */
+        .dropdown-menu a:hover {
+          color: orange !important;
+          background-color: transparent !important;
+        }
+
+        /* Search input style */
+        .custom-input {
+          background-color: transparent;
+          border: 2px solid white;
+          color: white;
+        }
+
+        .custom-input::placeholder {
+          color: #ccc;
+        }
+
+        .custom-input:focus {
+          border-color: #7303a0ff;
+          box-shadow: 0 0 0 0.2rem rgba(255,165,0,0.25);
+        }
+
+        /* Orange button */
+        .btn-orange {
+          background-color: #7303a0ff !important;
+          color: white !important;
+          border: none;
+        }
+
+        .btn-orange:hover,
+        .btn-orange:focus,
+        .btn-orange:active {
+          background-color: #7303a0ff !important;
+          color: white !important;
+          box-shadow: none;
+        }
+      

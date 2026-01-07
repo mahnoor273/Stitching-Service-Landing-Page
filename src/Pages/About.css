@@ -1,0 +1,122 @@
+/* ===== SECTION ===== */
+.about-section {
+  padding: 100px 0;
+}
+
+/* ===== CONTAINER ===== */
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;     /* 🔥 TEXT + IMAGE CENTER */
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* ===== TEXT ===== */
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.about-text p {
+  font-size: 25px;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+.features-text {
+  font-size: 50px;
+}
+
+.why-text {
+  font-size: 35px;
+}
+
+.highlight {
+  color: #7303a0ff;
+}
+
+/* ===== BUTTON ===== */
+.btn-wrapper {
+  margin-top: 50px;
+}
+
+.btn-main {
+  padding: 18px 45px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #7303a0ff;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ===== IMAGE ===== */
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* ===== BANNER ===== */
+.banner-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.banner-img,
+.banner-overlay {
+  position: absolute;
+  inset: 0;               /* 🔥 SAME SIZE */
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* 🔥 BANNER BUTTON HEIGHT */
+.banner-btn {
+  margin-top: 60px;
+  padding: 25px 55px;     /* HEIGHT INCREASED */
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
