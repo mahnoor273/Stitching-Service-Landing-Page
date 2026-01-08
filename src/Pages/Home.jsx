@@ -8,7 +8,7 @@ import Testimonials from "../Components/Testimonials/Testimonials";
 import Banner from "../Components/Banner/Banner";
 import Faqs from "../Components/Faqs/Faqs";
 import Footer from "../Components/Footer/Footer";
-import FadeInSection from "../Components/FadeInSection/FadeInSection";
+import FadeInSection from "../Components/FadeInSection";
 
 const Home = () => {
   return (

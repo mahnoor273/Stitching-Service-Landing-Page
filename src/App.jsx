@@ -7,7 +7,7 @@ import withAnimation from './Components/withAnimation';
 import Navbar from './Components/Navbar/Navbar';
 import Scroll from './Components/Scroll';
 import Footer from './Components/Footer/Footer';
-
+import './index.css'
 // Pages import
 import Home from './Pages/Home';
 import About from './Pages/About';
