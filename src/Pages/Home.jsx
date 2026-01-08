@@ -64,8 +64,7 @@ const Home = () => {
         </div>
       </FadeInSection>
 
-      {/* Footer */}
-      <Footer />
+    
     </div>
   );
 };
