@@ -22,25 +22,18 @@ const ChooseYourFabric = () => {
   ];
 
   return (
-    <section
-      style={{
-        maxWidth: "1440px",
-        margin: "0 auto",
-        padding: "0 40px",
-      }}
-    >
+    <section style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 40px" }}>
       <h1
         style={{
           fontWeight: "bold",
           fontSize: "70px",
           marginTop: "120px",
-          textAlign: "center", // 👈 Heading center
+          textAlign: "center",
         }}
       >
         Choose Your Fabric
       </h1>
 
-      {/* GRID */}
       <div
         style={{
           display: "grid",
@@ -51,31 +44,38 @@ const ChooseYourFabric = () => {
         }}
       >
         {fabrics.map((item, i) => (
-          <Link
-            key={i}
-            to={item.link}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <Link key={i} to={item.link} style={{ textDecoration: "none", color: "inherit" }}>
             <div
               className="card"
               style={{
                 maxWidth: "280px",
-                height: "470px",
+                height: "auto", // 👈 height automatic
                 margin: "0 auto",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
-              <img
-                src={item.img}
-                alt={item.name}
+              <div
+                className="card-img-container"
                 style={{
-                  height: "230px",
-                  objectFit: "cover",
+                  width: "100%",
+                  height: "230px", // 👈 uniform height for all images
+                  overflow: "hidden",
                   borderRadius: "10px",
+                  marginBottom: "15px",
                 }}
-              />
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover", // 👈 ensures image covers container without distortion
+                  }}
+                />
+              </div>
 
               <div
                 className="card-body"
@@ -83,13 +83,12 @@ const ChooseYourFabric = () => {
                   flex: 1,
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center", // 👈 Button center
+                  alignItems: "center",
                 }}
               >
                 <h5 style={{ fontSize: "32px", fontWeight: "bold", textAlign: "center" }}>
                   {item.name}
                 </h5>
-
                 <p style={{ fontSize: "16px" }}>Price</p>
                 <h6 style={{ fontSize: "20px" }}>{item.price}</h6>
 
