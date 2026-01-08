@@ -334,3 +334,68 @@ section {
     padding: 12px 25px;
   }
 }
+
+
+
+/* Trending grids (cards, colors, styles, designs) */
+@media (max-width: 1200px) {
+  div[style*="grid-template-columns"] {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    justify-content: center !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns"] {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 30px !important;
+  }
+
+  div[style*="width: 350px"],
+  div[style*="width: 300px"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  h1 {
+    font-size: clamp(36px, 6vw, 50px) !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  div[style*="flex"] {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  button {
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px !important;
+    margin-top: 60px !important;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
