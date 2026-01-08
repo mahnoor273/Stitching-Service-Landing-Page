@@ -13,7 +13,7 @@ import FadeInSection from "../Components/FadeInSection";
 const Home = () => {
   return (
     <div style={{ overflowX: "hidden" }}>
-      <Navbar />
+     
 
       {/* Hero Section */}
       <FadeInSection delay={0.2}>
