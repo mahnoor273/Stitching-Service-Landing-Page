@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import withAnimation from './Components/withAnimation';
+import FadeInSection from "./Components/FadeInSection";
 
 import Navbar from './Components/Navbar/Navbar';
 import Scroll from './Components/Scroll';
