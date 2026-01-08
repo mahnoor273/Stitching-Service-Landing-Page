@@ -399,3 +399,48 @@ section {
     width: 100%;
   }
 }
+/* ---------------- Choose Your Fabric & Trending Buttons Center ---------------- */
+.card-body button {
+  display: block;
+  margin: 15px auto 0 auto;
+}
+
+/* Responsive grid for cards */
+div[style*="grid-template-columns"] {
+  justify-content: center !important;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  div[style*="grid-template-columns"] {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 30px !important;
+  }
+
+  div[style*="width: 350px"],
+  div[style*="width: 300px"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .card-body button {
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .card-body button {
+    width: 100%;
+  }
+}
