@@ -49,21 +49,23 @@ const ChooseYourFabric = () => {
               className="card"
               style={{
                 maxWidth: "280px",
-                height: "auto", // 👈 height automatic
+                height: "470px", // 👈 FIXED card height
                 margin: "0 auto",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
+                borderRadius: "10px",
+                overflow: "hidden",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
               }}
             >
+              {/* Image */}
               <div
                 className="card-img-container"
                 style={{
                   width: "100%",
-                  height: "230px", // 👈 uniform height for all images
+                  height: "230px", // 👈 uniform image height
                   overflow: "hidden",
-                  borderRadius: "10px",
-                  marginBottom: "15px",
                 }}
               >
                 <img
@@ -72,11 +74,12 @@ const ChooseYourFabric = () => {
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover", // 👈 ensures image covers container without distortion
+                    objectFit: "cover", // important for uniformity
                   }}
                 />
               </div>
 
+              {/* Text + Button */}
               <div
                 className="card-body"
                 style={{
@@ -84,39 +87,40 @@ const ChooseYourFabric = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "15px",
+                  textAlign: "center",
                 }}
               >
-                <h5 style={{ fontSize: "32px", fontWeight: "bold", textAlign: "center" }}>
-                  {item.name}
-                </h5>
-                <p style={{ fontSize: "16px" }}>Price</p>
-                <h6 style={{ fontSize: "20px" }}>{item.price}</h6>
-
-                <div style={{ marginTop: "auto", textAlign: "center" }}>
-                  <button
-                    style={{
-                      backgroundColor: "#7303a0ff",
-                      padding: "10px 28px",
-                      fontSize: "16px",
-                      border: "none",
-                      borderRadius: "6px",
-                      fontWeight: "bold",
-                      cursor: "pointer",
-                      minWidth: "140px",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = "#b800bd";
-                      e.target.style.color = "white";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = "#7303a0ff";
-                      e.target.style.color = "black";
-                    }}
-                  >
-                    Buy Now
-                  </button>
+                <div>
+                  <h5 style={{ fontSize: "32px", fontWeight: "bold" }}>{item.name}</h5>
+                  <p style={{ fontSize: "16px", margin: "5px 0" }}>Price</p>
+                  <h6 style={{ fontSize: "20px" }}>{item.price}</h6>
                 </div>
+
+                <button
+                  style={{
+                    backgroundColor: "#7303a0ff",
+                    padding: "10px 28px",
+                    fontSize: "16px",
+                    border: "none",
+                    borderRadius: "6px",
+                    fontWeight: "bold",
+                    cursor: "pointer",
+                    minWidth: "140px",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "#b800bd";
+                    e.target.style.color = "white";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = "#7303a0ff";
+                    e.target.style.color = "black";
+                  }}
+                >
+                  Buy Now
+                </button>
               </div>
             </div>
           </Link>
