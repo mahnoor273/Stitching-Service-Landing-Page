@@ -59,18 +59,27 @@ const Addyourmeasurements = () => {
       </motion.div>
 
       {/* ===== Image ===== */}
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        style={{ marginTop: "80px", textAlign: "center" }}
-      >
-        <img
-          src={measurement}
-          alt="measurement guide"
-          style={{ maxWidth: "500px", width: "100%" }}
-        />
-      </motion.div>
+     <motion.div
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  style={{
+    marginTop: "80px",
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src={measurement}
+    alt="measurement guide"
+    style={{
+      width: "100%",
+      maxWidth: "500px",
+      height: "auto",
+    }}
+  />
+</motion.div>
+
 
       {/* ===== Editable Measurements ===== */}
       <motion.div

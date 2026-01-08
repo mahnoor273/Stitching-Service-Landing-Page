@@ -88,16 +88,18 @@ const ChooseYourFabric = () => {
 
                 <div style={{ marginTop: "auto", textAlign: "right" }}>
                   <button
-                    style={{
-                      backgroundColor: "#7303a0ff",
-                      padding: "10px 24px",
-                      fontSize: "16px",
-                      border: "none",
-                      borderRadius: "5px",
-                      fontWeight: "bold",
-                      cursor: "pointer",
-                    }}
-                  >
+  style={{
+    backgroundColor: "#7303a0ff",
+    padding: "10px 28px",
+    fontSize: "16px",
+    border: "none",
+    borderRadius: "6px",
+    fontWeight: "bold",
+    cursor: "pointer",
+    minWidth: "140px",
+  }}
+>
+
                     Buy Now
                   </button>
                 </div>
